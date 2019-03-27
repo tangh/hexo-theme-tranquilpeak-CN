@@ -216,7 +216,7 @@ $image-gallery-photos-margin: 2px;
 
 // Main content
 $main-content: (
-    'max-width':          750px,
+    'max-width':          864px,
     'padding-right-left': 20px,
 );
 
@@ -226,12 +226,12 @@ $main-content: (
 // because they are larger than the post title or something like that
 // font-size : (X.Xrem = XXpx, 1.0rem = 10px)
 $markdown-headings-font-size: (
-    'h1': 3rem,
-    'h2': 2.7rem,
-    'h3': 2.4rem,
-    'h4': 2.1rem,
-    'h5': 1.9rem,
-    'h6': 1.7rem
+    'h1': 2.8rem,
+    'h2': 2.4rem,
+    'h3': 2.1rem,
+    'h4': 1.9rem,
+    'h5': 1.8rem,
+    'h6': 1.8rem
 );
 // Reduction of markdwon headings on small screen and down
 $markdown-headings-font-size-sm-screen-reduction-factor: 0.35rem;
@@ -244,7 +244,7 @@ $pagination-height: 60px;
 // Post thumbnail image
 // Width and height of post's thumbnail image
 $post-thumbnail-image-width: 140px;
-$post-bottom-thumbnail-image-max-height: 250px;
+$post-bottom-thumbnail-image-max-height: 320px;
 
 // Tooltip
 $tooltip: (
