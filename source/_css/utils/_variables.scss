@@ -3,8 +3,8 @@
 
 // Font families
 $open-sans:            'Open Sans';
-$open-sans-sans-serif: 'Open Sans', sans-serif;
-$merriweather-serif:   'Merriweather', serif;
+$open-sans-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+$merriweather-serif:   'Merriweather', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Source Han Sans SC', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif;
 $monospace:             Menlo, Consolas, monospace;
 
 $font-family-base: $open-sans-sans-serif;
