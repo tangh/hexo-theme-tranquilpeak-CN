@@ -106,7 +106,7 @@ To enable `all-categories` page:
 
 1. Run `hexo new page "all-categories"`. A new folder named `all-categories` will be created in `source/`
 2. Replace `source/all-categories/index.md` content with:
- 
+
 ``` markdown
 ---
 title: "all-categories"
@@ -123,7 +123,7 @@ To enable `all-tags` page:
 
 1. Run `hexo new page "all-tags"`. A new folder named `all-tags` will be created in `source/`
 2. Replace `source/all-tags/index.md` content with:
- 
+
 ``` markdown
 ---
 title: "all-tags"
@@ -140,14 +140,14 @@ To enable `all-archives` page:
 
 1. Run `hexo new page "all-archives"`. A new folder named `all-archives` will be created in `source/`
 2. Replace `source/all-archives/index.md` content with:
- 
+
 ``` markdown
 ---
 title: "all-archives"
 layout: "all-archives"
 comments: false
 ---
-```  
+```
 
 This page will be reachable at: `/all-archives`. On this page, users will be able to search and filter posts by date.  
 **Search pattern** : YYYY/MMM/DD
@@ -161,7 +161,7 @@ This page will be reachable at: `/all-archives`. On this page, users will be abl
 While you are writing articles, you need to check the result a lot of times before deploying your site.
 If you have enable Google analytics service, Google will include all requests done, even when hostname is localhost and this can greatly skew the results.
 To overcome this, you have to add a filter on Google Analytics website.
-   
+
 Follow these steps, to add new filter :
 
 1. Sign in to your Google Analytics account
@@ -230,7 +230,7 @@ To use tags plugins to highlight code or add Fancybox image, please read [Hexo d
 Tranquilpeak introduces new variables to give you a lot of possibilities.  
 
 **Since Tranquilpeak 1.7, if you declare some photos in `photos` variable with a caption or an thumbnail url, please use `gallery` variable name instead of `photos` otherwise Hexo will generate wrong url for these images in open graph meta tag.**
-  
+
 Example :  
 ``` markdown
 disqusIdentifier: fdsF34ff34
@@ -274,14 +274,15 @@ actions: false
 |comments|Disable the comment of the post.|
 |meta|Disable post meta (date, categories).|
 |actions|Disable post actions (navigation, share links).|
+|serifFonts|Set `serifFonts: true` to enable serif Chinese fonts (Noto Serif SC / Source Han Serif SC) in the post.|
 
 Example: 
 A post on index page will look like this with :`thumbnailImagePosition` set to `bottom`:  
 ![thumbnail-image-position-bottom](https://s3-ap-northeast-1.amazonaws.com/tranquilpeak-hexo-theme/docs/1.4.0/TIP-bottom-400.jpg)  
-  
+
 The same with : `thumbnailImagePosition` set to `right`:  
 ![thumbnail-image-position-right](https://s3-ap-northeast-1.amazonaws.com/tranquilpeak-hexo-theme/docs/1.4.0/TIP-right-400.png)  
-  
+
 The same with : `thumbnailImagePosition` set to `left`:  
 ![thumbnail-image-position-left](https://s3-ap-northeast-1.amazonaws.com/tranquilpeak-hexo-theme/docs/1.4.0/TIP-left-400.png)  
 
@@ -302,9 +303,9 @@ Of course, you can set external url.**
 ### Display table of contents
 
 You can display table of contents of a post with  `<!-- toc -->`.  Place this comment where you want to display it. You can also edit the title displayed at the top of the table of contents in the `_config.yml` file.
-  
+
 ![thumbnail-image-position-left](https://s3-ap-northeast-1.amazonaws.com/tranquilpeak-hexo-theme/docs/1.4.0/toc-400.png) 
-  
+
 ### Tags
 
 Tranquilpeak introduces new tags to display alert messages, images in full width and create beautiful galleries.
@@ -345,7 +346,7 @@ Syntax :
 {% hl_text [(classes | hexa code | rgb color | rgba color)] %} 
 content
 {% endhl_text %}
-``` 
+```
 
 E.g :  
 ```
@@ -355,9 +356,9 @@ your highlighted text
 ```
 
 |Argument|Description|
-|---|---| 
+|---|---|
 |Classes|<strong>classes</strong> : <ul><li>red</li><li>green</li><li>blue</li><li>purple</li><li>orange</li><li>yellow</li><li>cyan</li><li>primary</li><li>success</li><li>warning</li><li>danger</li></ul>|
-        
+
 **You can also use hexa color, rgb color, rgba color.**
 
 **It's important to put the paragraph that contains highlight text tag inside** `<p>...</p>` 
@@ -381,7 +382,7 @@ Syntax : `{% image [classes] group:group-name /path/to/image [/path/to/thumbnail
 E.g : `{% image fancybox right clear group:travel image2.png http://google.fr/images/image125.png 150px 300px "A beautiful sunrise" %}`
 
 |Argument|Description|
-|---|---| 
+|---|---|
 |Classes (optional)|You can add css classes to stylize the image. Separate class with whitespace. Tranquilpeak integrate many css class to create nice effects :  <ul><li><strong>fancybox</strong> : Generate a fancybox image.</li><li><strong>nocaption</strong> : Caption of the image will not be displayed.</li><li><strong>left</strong> : Image will float at the left.</li><li><strong>right</strong> : Image will float at the right.</li><li><strong>center</strong> : Image will be at center.</li><li><strong>fig-20</strong> : Image will take 20% of the width of post width and automatically float at left.</li><li><strong>fig-25</strong> : Image will take 25% of the width of post width and automatically float at left.</li><li><strong>fig-33</strong> : Image will take 33% of the width of post width and automatically float at left.</li><li><strong>fig-50</strong> : Image will take 50% of the width of post width and automatically float at left.</li><li><strong>fig-75</strong> : Image will take 75% of the width of post width and automatically float at left.</li><li><strong>fig-100</strong> : Image will take 100% of the width of post width.</li><li><strong>clear</strong> : Add a div with `clear:both;` style attached after the image to retrieve the normal flow of the post.</li></ul>|
 |Group (optional)| Name of a group, used to create a gallery. **Only for image with `fancybox` css class**|
 |Orignal image| Path to the original image.|
@@ -389,7 +390,7 @@ E.g : `{% image fancybox right clear group:travel image2.png http://google.fr/im
 |Width of thumbnail image (optional)| Width to the thumbnail image. If the thumbnail image is empty, width will be attached to thumbnail image created from original image. E.g : `150px` or `85%`.|
 |Height of thumbnail image (optional)| Height to the thumbnail image. If the thumbnail image is empty, height will be attached to thumbnail image created from original image. E.g : `300px` or `20%`.|
 |Title (optional)| Title of image displayed in a caption under image. `Alt` HTML attribute will use this title. E.g : `"A beautiful sunrise"`.|
- 
+
 #### Tabbed code block
 
 Tabbed code blocks are useful to group multiple code blocks related. For example, the source code of a web component (html, css and js). Or compare a source code in different languages.
@@ -419,9 +420,9 @@ E.g :
           }
       <!-- endtab -->
   {% endtabbed_codeblock %}
-``` 
+```
 |Argument|Description|
-|---|---| 
+|---|---|
 |Name (optional)|Name of the code block, or of the file|
 |Link (optional)|Link to a demo, or a file|
 |Lang (optional)|Programming language use for the current tab|
@@ -434,9 +435,9 @@ Syntax : `{% wide_image /path/to/image [title text] %}`
 E.g : `{% wide_image http://google.fr/images/image125.png "A beautiful sunrise" %}`  
 
 |Argument|Description|
-|---|---| 
+|---|---|
 |Image|Path to the original image.|
-|Title (optional)|Title of image displayed in a caption under image. `Alt` HTML attribute will use this title. E.g : `"A beautiful sunrise"`.| 
+|Title (optional)|Title of image displayed in a caption under image. `Alt` HTML attribute will use this title. E.g : `"A beautiful sunrise"`.|
 
 #### Fancybox
 
