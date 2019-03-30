@@ -3,10 +3,11 @@
     display:            none;
     position:           fixed;
     bottom:             0;
-    height:             60px;
-    background:         white;
+    height:             auto;
+    // height:          60px;
+    // background:      white;
     margin:             0;
-    border-top:         1px solid #eef2f8;
+    // border-top:      1px solid #eef2f8;
     padding:            0 15px;
     z-index:            map-get($z-indexes, c-post-bottom-bar);
     transition:         transform .25s ease-in-out;
@@ -47,6 +48,7 @@
         &[data-behavior="5"] {
             @include bottom-bar-lg;
             @include bottom-bar-pushed-lg;
+            bottom: 10px;
         }
         // Display bottom bar in large size and push it from the size of the medium sidebar
         &[data-behavior="6"] {
@@ -74,6 +76,8 @@
         &[data-behavior="5"] {
             @include bottom-bar-lg;
             @include bottom-bar-pushed-lg;
+            right: calc(25% - #{map-get($main-content, max-width)}/4 - 35px);
+            bottom: 10px;
         }
         // Display bottom bar in large size and push it from the size of the medium sidebar
         &[data-behavior="6"] {
@@ -104,6 +108,8 @@
         &[data-behavior="4"] {
             @include bottom-bar-lg;
             @include bottom-bar-pushed-xlg;
+            right: calc(25% - #{map-get($main-content, max-width)}/4 - 35px);
+            bottom: 10px;
         }
         // Display bottom bar in large size and push it from the size of the extra large sidebar
         &[data-behavior="5"] {

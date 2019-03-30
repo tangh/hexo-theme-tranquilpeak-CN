@@ -54,6 +54,44 @@
     }
 }
 
+.post-bar-actions-wrap {
+    height:      60px;
+    padding:     0;
+    line-height: 60px;
+    clear:       both;
+
+    div.post-actions {
+        float:        left;
+        padding-left: 0;
+        margin-top:   0;
+        list-style:   none;
+
+        div.post-action {
+            width:      auto;
+            text-align: center;
+        }
+    }
+    div.post-action-share {
+        // 100% minus width of `.post-action-nav`,
+        // best width for responsive post's share panel on small screen and up
+        width:   100%;
+
+        div.post-action {
+            // float: right;   Vertical stack
+            // margin-right: 10px;   Middle align
+            margin-bottom: 15px;
+            line-height: 40px;
+
+            .post-bar-action-btn {
+                // margin-right: 15px;
+                padding:  8px 14px;
+                border-radius: 50%;
+                box-shadow: 0.1px 0.1px 1px;
+            }          
+        }
+    }
+}
+
 // Increase width of `.post-actions-share` on small screen
 @media #{$small-and-down} {
     .post-actions-wrap {
