@@ -42,8 +42,9 @@
             max-width:     map-get($main-content, 'max-width');
             margin:        0 auto;
             color:         white;
-            text-shadow:   0 2px 0 rgba(0, 0, 0, 0.9);
+            text-shadow:   0 2px 0 rgba(51, 51, 51, 0.9);
             margin-bottom: 20px;
+            letter-spacing: 0rem;
 
             &:hover {
                 text-decoration: none;

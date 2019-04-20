@@ -4,6 +4,7 @@
         @each $key, $value in $markdown-headings-font-size {
             #{$key} {
                 font-size: $value;
+                text-align: left;
             }
         }
         h1 {
