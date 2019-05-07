@@ -18,19 +18,20 @@
      * @return {void}
      */
     run: function() {
-      var self = this;
+      // var self = this;    Nerver used in this func
       // Detect the click on the hash tag links
       this.$hashTags.click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+        if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
           if (this.href.slice(-1) === '#' && this.hash === '') {
             var targetOffset = 0;
-          } else {
+          }
+          else {
             var $target = $(this.hash);
             var targetOffset = $target.offset().top;
           }
           $('html,body').animate({
               scrollTop: targetOffset
-          },750);
+          }, 750);
           return false;
           }
         }
