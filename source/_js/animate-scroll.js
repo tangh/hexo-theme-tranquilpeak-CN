@@ -9,7 +9,7 @@
    */
   var AnimateHashTagLinks = function() {
     // Elements where the user can click to trigger in-page jump
-    this.$hashTags = $('a[href="#"],a[href="#table-of-contents"],a[href="#disqus_thread"],a.toc-link,a.category-anchor,a.tag').filter('[href^="#"]');
+    this.$hashTags = $('a[href="#"],a[href="#table-of-contents"],a[href="#disqus_thread"],a[href="#gitalk"],a.toc-link,a.category-anchor,a.tag').filter('[href^="#"]');
   };
 
   AnimateHashTagLinks.prototype = {

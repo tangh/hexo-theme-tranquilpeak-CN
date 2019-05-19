@@ -24,29 +24,35 @@
                 (d.head || d.body).appendChild(s);
             })();
         </script>
-    <% } else if (theme.gitment.enable) { %>
+    <% } else if (theme.gitalk.enable) { %>
         <script type="text/javascript">
             (function() {
                 function render() {
-                    new Gitment({
-                        id: '<%= post.permalink %>',
-                        owner: '<%- theme.gitment.github_id %>',
-                        repo: '<%- theme.gitment.repo %>',
-                        oauth: {
-                            client_id: '<%- theme.gitment.client_id %>',
-                            client_secret: '<%- theme.gitment.client_secret %>',
-                        }
-                    }).render('gitment');
+                    new Gitalk({
+                        clientID: '<%- theme.gitalk.client_id %>',
+                        clientSecret: '<%- theme.gitalk.client_secret %>',                       
+                        owner: '<%- theme.gitalk.github_id %>',
+                        admin: ['<%- theme.gitalk.github_id %>'],
+                        repo: '<%- theme.gitalk.repo %>',
+                        id: '<%= post.permalink %>'.replace(/https:\/\/(.*?)\//, ''),
+                        <% if (theme.gitalk.language) { %>
+                        language: '<%- theme.gitalk.language %>',
+                        <% } %>
+                        perPage: <%- theme.gitalk.comments_per_page %>,
+                        distractionFreeMode: <%- theme.gitalk.distraction_free %>,
+                        pagerDirection: '<%- theme.gitalk.comments_order %>',
+                        createIssueManually: <%- theme.gitalk.manually_create_issue %>
+                    }).render('gitalk');
                 }
                 var gc = document.createElement('script');
                 gc.type = 'text/javascript';
-                gc.src = '//imsun.github.io/gitment/dist/gitment.browser.js';
+                gc.src = '//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js';
                 gc.charset = 'UTF-8';
                 gc.onload = render;
                 gc.async = true;
                 document.querySelector('body').appendChild(gc);
                 var gcs = document.createElement('link');
-                gcs.href = '//imsun.github.io/gitment/style/default.css';
+                gcs.href = '//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css';
                 gcs.type = 'text/css';
                 gcs.rel = 'stylesheet';
                 gcs.media = 'screen,print';

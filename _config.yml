@@ -189,9 +189,9 @@ tag_pagination: true
 
 # Your Disqus shortname
 disqus_shortname:
-# Your Gitment information
-# Read https://github.com/imsun/gitment#get-started to setup Gitment
-gitment:
+# Your Gitalk information
+# Read https://github.com/gitalk/gitalk to setup Gitalk
+gitalk:
     # Switch
     enable: false
     # Your Github ID (Github username):
@@ -202,6 +202,16 @@ gitment:
     client_id:
     # Your client secret:
     client_secret:
+    # Gitalk language ([en, zh-CN, zh-TW], leave empty to use navigator.language):
+    language:
+    # Comments per load:
+    comments_per_page: 10
+    # Distraction Free:
+    distraction_free: false
+    # order of comments (last:show latest comment on top, or first: show first comment on top):
+    comments_order: first
+    # Whether manually create issue for new post
+    manually_create_issue: false
 
 # -------------------
 # Integrated services

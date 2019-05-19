@@ -53,7 +53,7 @@ Besides adjustments for better Chinese character display, it also has several ot
 - Gravatar
 - Algolia
 - Facebook Insights
-- Gitment
+- Gitalk
  
 ## Quick start
 

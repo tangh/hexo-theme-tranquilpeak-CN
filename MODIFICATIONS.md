@@ -12,6 +12,7 @@ Now based on [hexo-theme-tranquilpeak/master-v3.0.2](https://github.com/LouisBar
 - scroll animation
 - simplified bottom bar, only has back-to-top button and scroll-to-comment-area button
 - apple touch icon support
+- Gitment -> Gitalk
 
 **About Styles :**  
 
