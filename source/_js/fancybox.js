@@ -24,10 +24,16 @@
           'close'
         ],
         thumbs: {
-          autoStart: thumbs,
+          autoStart: false, // Display thumbnails on opening
           axis: 'x'
         },
-        protect: true
+        protect: true,
+        idleTime: 5,
+        animationEffect: "zoom",
+        preventCaptionOverlap: true,
+        mobile: {
+          preventCaptionOverlap: true
+        }
       });
     }
 

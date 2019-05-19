@@ -49,12 +49,12 @@
     "rand-token": "0.4.0"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "3.2.5",
-    "@fortawesome/fontawesome-free": "5.1.0",
+    "@fancyapps/fancybox": "3.5.7",
+    "@fortawesome/fontawesome-free": "5.8.2",
     "hexo-util": "0.6.3",
-    "jquery": "3.3.1",
-    "jsdom": "11.6.2",
-    "strip-indent": "2.0.0"
+    "jquery": "3.4.1",
+    "jsdom": "15.1.0",
+    "strip-indent": "3.0.0"
   },
   "engines": {
     "node": ">=6.13.1"
