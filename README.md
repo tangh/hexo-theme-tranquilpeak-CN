@@ -3,7 +3,9 @@
 [![Build Status](https://travis-ci.org/tangh/hexo-theme-tranquilpeak-CN.svg?branch=master)](https://travis-ci.org/tangh/hexo-theme-tranquilpeak-CN)
 [![Slack](https://img.shields.io/badge/slack-join-cf0e5b.svg?style=flat-square)](https://now-examples-slackin-stlpermtzi.now.sh)
 
-A gorgeous responsive theme for Hexo blog framework 
+Modified version of original [hexo-theme-tranquilpeak](https://github.com/LouisBarranqueiro/hexo-theme-tranquilpeak): A gorgeous responsive theme for Hexo blog framework.
+
+Besides adjustments for better Chinese character display, it also has several other improvements compare with original theme. See [modifications.md](/MODIFICATIONS.md) for details.
 
 [![Tranquilpeak](http://d1u9biwaxjngwg.cloudfront.net/showcases/showcase-v2.jpg)](http://louisbarranqueiro.github.io/hexo-theme-tranquilpeak)
 
