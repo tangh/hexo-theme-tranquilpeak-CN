@@ -182,7 +182,7 @@ var feeds = [];
             <meta class="swiftype" name="image" data-type="enum" content="<%= photo %>"/>
         <% }) %>
     <% } %>
-    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700&amp;subset=chinese-simplified,cyrillic,japanese" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
     <!--STYLES-->
     <%- css('assets/css/all.css') %>
     <%- css('assets/css/jquery.fancybox.css') %>
@@ -192,11 +192,4 @@ var feeds = [];
     <%- partial('google-analytics') %>
     <%- partial('baidu-analytics') %>
 
-    <% if (page.comments) { %>
-        <% if (theme.gitment.enable) { %>
-            <%- css('assets/css/gitment.css') %>
-        <% } else if (theme.gitalk.enable) { %>
-            <%- css('assets/css/gitalk.css') %>
-        <% } %>
-    <% } %>
 </head>

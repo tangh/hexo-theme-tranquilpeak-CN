@@ -56,24 +56,6 @@ module.exports = function(grunt) {
           src: jqueryPath + '/dist/jquery.js',
           dest: jsDestFolder + 'jquery.js'
         },
-        // gitment
-        {
-          src: gitmentPath + '/dist/gitment.browser.js',
-          dest: jsDestFolder + 'gitment.js'
-        },
-        {
-          src: gitmentPath + '/style/default.css',
-          dest: cssDestFolder + 'gitment.css'
-        },
-        // gitalk
-        {
-          src: gitalkPath + '/dist/gitalk.js',
-          dest: jsDestFolder + 'gitalk.js'
-        },
-        {
-          src: gitalkPath + '/dist/gitalk.css',
-          dest: cssDestFolder + 'gitalk.css'
-        },
         {
           src: './node_modules/moment/min/moment-with-locales.js',
           dest: jsDestFolder + 'moment-with-locales.js'
