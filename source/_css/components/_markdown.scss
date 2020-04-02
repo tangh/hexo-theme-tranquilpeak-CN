@@ -4,7 +4,11 @@
         @each $key, $value in $markdown-headings-font-size {
             #{$key} {
                 font-size: $value;
+                text-align: left;
             }
+        }
+        h1 {
+            margin-top: 60px;
         }
     }
 }
@@ -27,6 +31,9 @@
             #{$key} {
                 font-size: $value - $markdown-headings-font-size-md-screen-reduction-factor;
             }
+        }
+        h1 {
+            margin-top: 60px;
         }
     }
 }

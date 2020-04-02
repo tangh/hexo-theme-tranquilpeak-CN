@@ -17,7 +17,7 @@ function displayCategoriesAndPosts(category) {
     }
     // create post content
     var html = '';
-    html += '<div id="posts-list-' + category.name + '" class="archive ' + boxCSSClass + '" ' +
+    html += '<div id="posts-list-' + category.name.replace(' ', '-') + '" class="archive ' + boxCSSClass + '" ' +
         'data-category="' + category.name.toLowerCase() + '" ' +
         'data-parent-categories="' + category.parents.join(',') + '">';
     // add category title
@@ -68,7 +68,7 @@ function displayCategories(category) {
     // create category content
     var html = '';
     html += '<div>';
-    html += '<a href="#posts-list-' + category.name + '" ' +
+    html += '<a href="#posts-list-' + category.name.replace(' ', '-') + '" ' +
         'class="category-anchor" ' +
         'data-category="' + category.name.toLowerCase() + '" ' +
         'data-parent-categories="' + category.parents.join(',') + '">';

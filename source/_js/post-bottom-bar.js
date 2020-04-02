@@ -58,14 +58,16 @@
         if (Math.abs(this.lastScrollDownPos - scrollTop) > this.delta &&
           (postFooterOffsetTop + this.$postFooter.height() > scrollTop + $(window).height() ||
             postFooterOffsetTop < scrollTop + this.$header.height())) {
-          this.$postBottomBar.slideDown();
+          // this.$postBottomBar.slideDown();
+          this.$postBottomBar.fadeIn();
           this.lastScrollUpPos = scrollTop;
         }
       }
 
       // scrolling down
       if (scrollTop > this.lastScrollUpPos + this.delta) {
-        this.$postBottomBar.slideUp();
+        // this.$postBottomBar.slideUp();
+        this.$postBottomBar.fadeOut();
         this.lastScrollDownPos = scrollTop;
       }
 

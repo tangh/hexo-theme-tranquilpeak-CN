@@ -25,36 +25,36 @@
             (d.head || d.body).appendChild(s);
           })();
         </script>
-    <% } else if (theme.gitment.enable) { %>
-        <%- js('assets/js/gitment.js') %>
-        <script type="text/javascript">
-          (function() {
-            new Gitment({
-              id: '<%= post[theme.gitment.post_identifier] %>',
-              owner: '<%- theme.gitment.github_id %>',
-              repo: '<%- theme.gitment.repo %>',
-              oauth: {
-                client_id: '<%- theme.gitment.client_id %>',
-                client_secret: '<%- theme.gitment.client_secret %>'
-              }
-            }).render('gitment')
-          })()
-        </script>
     <% } else if (theme.gitalk.enable) { %>
-        <%- js('assets/js/gitalk.js') %>
-        <script type="text/javascript">
-          (function() {
+      <script type="text/javascript">
+        (function() {
+          function render() {
             new Gitalk({
               clientID: '<%= theme.gitalk.client_id %>',
               clientSecret: '<%= theme.gitalk.client_secret %>',
               repo: '<%= theme.gitalk.repo %>',
               owner: '<%= theme.gitalk.owner %>',
               admin: ['<%= theme.gitalk.owner %>'],
-              id: '<%= post[theme.gitalk.post_identifier] %>',
+              id: '<%= post.permalink %>'.replace(/https:\/\/(.*?)\//, ''),
+              title: document.title,
               ...<%- JSON.stringify(theme.gitalk.options) %>
-            }).render('gitalk')
-          })()
-        </script>
+            }).render('gitalk');
+          }
+          var gc = document.createElement('script');
+          gc.type = 'text/javascript';
+          gc.src = '//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js';
+          gc.charset = 'UTF-8';
+          gc.onload = render;
+          gc.async = true;
+          document.querySelector('body').appendChild(gc);
+          var gcs = document.createElement('link');
+          gcs.href = '//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css';
+          gcs.type = 'text/css';
+          gcs.rel = 'stylesheet';
+          gcs.media = 'screen,print';
+          document.querySelector('head').appendChild(gcs);
+        })();
+      </script>
     <% } %>
 <% } %>
 

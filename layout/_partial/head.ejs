@@ -141,6 +141,9 @@ var feeds = [];
     <% if (theme.favicon) { %>
         <link rel="icon" href="<%= resolve_asset_url(theme.image_dir, theme.favicon) %>">
     <% } %>
+    <% if (theme.apple_touch_icon) { %>
+        <link rel="apple-touch-icon" sizes="180x180" href="<%= resolve_asset_url(theme.image_dir, theme.apple_touch_icon) %>">
+    <% } %>
     <% if (feeds.length) { %>
         <% feeds.forEach(function(feed) { %>
             <link rel="alternate" type="application/<%= feed.type %>+xml" title="RSS" href="<%- url_for(feed.path) %>">
@@ -179,6 +182,7 @@ var feeds = [];
             <meta class="swiftype" name="image" data-type="enum" content="<%= photo %>"/>
         <% }) %>
     <% } %>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+SC:400,700&amp;subset=chinese-simplified,cyrillic,japanese" rel="stylesheet">
     <!--STYLES-->
     <%- css('assets/css/all.css') %>
     <%- css('assets/css/jquery.fancybox.css') %>

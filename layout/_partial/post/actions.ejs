@@ -66,17 +66,7 @@
             </li>
         <% } %>
         <% if (post.comments) { %>
-            <% if (theme.gitment.enable) { %>
-                <li class="post-action">
-                    <a
-                        class="post-action-btn btn btn--default"
-                        href="#gitment"
-                        aria-label="<%= __('post.comment') %>"
-                    >
-                        <i class="fa fa-comment"></i>
-                    </a>
-                </li>
-            <% } else if (theme.gitalk.enable) { %>
+            <% if (theme.gitalk.enable) { %>
                 <li class="post-action">
                     <a
                         class="post-action-btn btn btn--default"
