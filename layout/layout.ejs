@@ -11,7 +11,11 @@
     }
 %>
 <!DOCTYPE html>
-<html lang="<%= config.language %>">
+<% if (page.postLanguage) { %>
+    <html lang="<%= page.postLanguage %>"></html>
+<%} else { %>
+    <html lang="<%= config.language %>">
+<% } %>
     <%- partial('_partial/head') %>
     <body>
         <div id="blog">

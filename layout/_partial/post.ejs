@@ -27,8 +27,10 @@
     <% if (!post.coverImage || post.coverMeta === 'out') { %>
         <%- partial('post/header')%>
     <% } %>
-    <% if (post.serifFonts) { %>
-        <div class="post-content-serif markdown">
+    <% if (post.scSerifFonts) { %>
+        <div class="post-content-serif-sc markdown">
+    <% } else if (post.tcSerifFonts) { %>
+        <div class="post-content-serif-tc markdown">
     <%} else { %>
         <div class="post-content markdown">
     <% } %>

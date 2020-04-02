@@ -53,11 +53,39 @@
             }
         }
     }
-    .post-content-serif {
+    .post-content-serif-sc {
         text-rendering: optimizelegibility;
         letter-spacing: -0.2px;
         text-align:     justify;
-        font-family:    map-get($font-families, 'post-content-serif');
+        font-family:    map-get($font-families, 'post-content-serif-sc');
+        color:          map-get($colors, base);
+        margin-top:     20px;
+        font-size:      1.7rem;
+        font-weight:    400;
+        overflow:       hidden;
+        @include prefix('hypens', 'auto', 'webkit' 'moz');
+
+        img {
+            display:   block;
+            width:     auto;
+            max-width: 100%;
+        }
+        :not(blockquote):not(li):not(.alert) {
+            & > p {
+                margin: 1.5em 0 0 0;
+            }
+        }
+        li {
+            p {
+                margin: 0 0 0 0;
+            }
+        }
+    }
+    .post-content-serif-tc {
+        text-rendering: optimizelegibility;
+        letter-spacing: -0.2px;
+        text-align:     justify;
+        font-family:    map-get($font-families, 'post-content-serif-tc');
         color:          map-get($colors, base);
         margin-top:     20px;
         font-size:      1.7rem;
@@ -118,7 +146,10 @@
     .post-content {
         font-size: 1.7rem;
     }
-    .post-content-serif {
+    .post-content-serif-sc {
+        font-size: 1.8rem;
+    }
+    .post-content-serif-tc {
         font-size: 1.8rem;
     }
 }

@@ -5,7 +5,8 @@
 $open-sans:            'Open Sans';
 $open-sans-sans-serif: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Microsoft YaHei', 'PingFang SC', sans-serif;
 $merriweather-serif:   'Merriweather', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Source Han Sans SC', 'Noto Sans CJK SC', 'Microsoft YaHei', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
-$noto-serif:           'Merriweather', 'Noto Serif JP', 'Source Han Serif JP', 'Noto Serif SC', 'Source Han Serif SC', 'PingFang SC', 'Microsoft YaHei', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+$noto-serif-sc:        'Merriweather', 'Noto Serif SC', 'Source Han Serif SC', 'PingFang SC', 'Microsoft YaHei', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+$noto-serif-tc:        'Merriweather', 'Noto Serif JP', 'Source Han Serif JP', 'Noto Serif SC', 'Source Han Serif SC', 'PingFang SC', 'Microsoft YaHei', sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 $monospace:             Menlo, Consolas, monospace;
 
 $font-family-base: $open-sans-sans-serif;
@@ -20,7 +21,8 @@ $font-families: (
    'post-header-cover':  $merriweather-serif,
    'post-meta':          $open-sans-sans-serif,
    'post-content':       $merriweather-serif,
-   'post-content-serif': $noto-serif,
+   'post-content-serif-sc': $noto-serif-sc,
+   'post-content-serif-tc': $noto-serif-tc,
    'post-excerpt-link':  $open-sans-sans-serif,
    'highlight':          $monospace,
    // layout
