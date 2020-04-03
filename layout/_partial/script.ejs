@@ -1,3 +1,14 @@
+<%
+  // only if is a post, generate gitalk_id
+  if (post.comments && theme.gitalk.enable){
+    var gitalk_id = post.permalink.replace(/https:\/\/(.*?)\//, '');
+    // check if permalink end with "/", remove it
+    if (gitalk_id[gitalk_id.length - 1] == "/") {
+      gitalk_id = gitalk_id.slice(0, -1);
+    };
+  };
+%>
+
 <!--SCRIPTS-->
 <%- js('assets/js/jquery.js') %>
 <%- js('assets/js/jquery.fancybox.js') %>
@@ -35,7 +46,7 @@
               repo: '<%= theme.gitalk.repo %>',
               owner: '<%= theme.gitalk.owner %>',
               admin: ['<%= theme.gitalk.owner %>'],
-              id: '<%= post.permalink %>'.replace(/https:\/\/(.*?)\//, ''),
+              id: '<%- gitalk_id %>',
               title: document.title,
               ...<%- JSON.stringify(theme.gitalk.options) %>
             }).render('gitalk');

@@ -9,14 +9,14 @@
 
         <section>
         <% site.tags.sort('name').each(function(tag) { %>
-            <a class="tag tag--primary tag--small" href="<%= '#' + tag.name.replace(' ', '-') + '-list' %>" data-tag="<%= tag.name.toLowerCase() %>">
+            <a class="tag tag--primary tag--small" href="<%= '#' + tag.name.replace(new RegExp(' ', 'gm'), '-') + '-list' %>" data-tag="<%= tag.name.toLowerCase() %>">
                 <%= tag.name %>
             </a>
         <% }); %>
     </section>
     <section class="boxes">
         <% site.tags.sort('name').each(function(tag) { %>
-            <div id="<%= tag.name.replace(' ', '-') + '-list' %>" class="archive box" data-tag="<%= tag.name.toLowerCase() %>">
+            <div id="<%= tag.name.replace(new RegExp(' ', 'gm'), '-') + '-list' %>" class="archive box" data-tag="<%= tag.name.toLowerCase() %>">
                 <h4 class="archive-title">
                     <a class="link-unstyled" href="<%- url_for(config.tag_dir + '/' + tag.slug) %>">
                         <%= tag.name + ' (' + tag.length + ')' %>
